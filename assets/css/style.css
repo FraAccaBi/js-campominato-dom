@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+header{
+    width: 1400px;
+    padding: 8px 3rem;
+    position: relative;
+}
+.logo > img {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    vertical-align: auto;
+    margin-bottom: -12px;
+}
+h1{
+    margin-top: -5px;
+}
+form{
+    position: absolute;
+    right: 80px;
+    top: 20px;
+}
+.container{
+    background-color: aquamarine;
+    padding: 4rem;
+}
+.cells {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cell{
+    border: 1px solid black;
+    aspect-ratio: 1 / 1 ;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.cell.selected {
+    color:white;
+    background-color: cornflowerblue;
+}
+
+footer > div{
+    padding: 8px 3rem ;
+}
