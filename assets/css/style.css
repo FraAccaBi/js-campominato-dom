@@ -42,7 +42,7 @@ form{
     align-items: center;
     justify-content: center
 }
-.cell.selected {
+.cell>.selected {
     color:white;
     background-color: cornflowerblue;
 }

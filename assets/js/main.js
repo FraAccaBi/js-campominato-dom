@@ -8,9 +8,11 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro. */
 //intercetta l'nvio del form
 document.querySelector('form').addEventListener('submit', function(event) {
     //previene il refresh della pagina
+    
     event.preventDefault();
-
+    
     startGame(event);
+    
 
 })
 
@@ -43,7 +45,7 @@ function startGame(event) {
  
      //console.log(cells_number, cols_number);
      generate_grid(cells_number, cols_number);
-     handleClick('.cells', '.selected')
+     handleClick('.cells', 'selected')
  
 }
 
@@ -60,6 +62,7 @@ function startGame(event) {
 function generate_grid(cells_number, cols_number) {
     //seleziono l'elento della dom desirato e lo assegniamo ad una const
     const gameAreaElement = document.querySelector('main .cells')
+    
 
 
 
@@ -99,7 +102,7 @@ function handleClick(css_selector, css_class) {
         const cellElement = cells[i];
         console.log(cellElement); 
         //3. attacchiamo l'event all'elemento della dom (cell)
-        cellElement.addEventListener('click', function() {
+        cellElement.addEventListener('click', function () {
             console.log(this);
             //4. evidenziare la cella di azzurro 
             //this.style.backgroundColor = 'cornflowerblue'
