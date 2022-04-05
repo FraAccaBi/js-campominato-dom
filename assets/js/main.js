@@ -10,12 +10,9 @@ document.querySelector('form').addEventListener('submit', function(event) {
     //previene il refresh della pagina
     
     event.preventDefault();
-    
+    // prendiamo dall'evento il livello ed estraiamo il valore
     startGame(event);
-    
-
 })
-
 
 /**
  * 
@@ -45,7 +42,7 @@ function startGame(event) {
  
      //console.log(cells_number, cols_number);
      generate_grid(cells_number, cols_number);
-     handleClick('.cells', 'selected')
+     handleClick('.cell', 'selected')
  
 }
 
@@ -80,6 +77,7 @@ function generate_grid(cells_number, cols_number) {
 
         //appendere la cella all'area di gioco
         gameAreaElement.append(cell)
+        //cell.addEventListener("click", handleClick)
 
     }
 }
@@ -94,7 +92,7 @@ function generate_grid(cells_number, cols_number) {
  * @param {string} css_selector 
  * @param {string} css_class 
  */
-function handleClick(css_selector, css_class) {
+ function handleClick(css_selector, css_class) {
 
     //1. selezioni tutte le celle queryselectorAll
     const cells = document.querySelectorAll(css_selector)
@@ -113,4 +111,12 @@ function handleClick(css_selector, css_class) {
         })       
     }
     
-}
+} 
+
+/* function handleClick() {
+    console.log("ciao");
+    console.log(this);
+    
+    // 1.  Seleziono tutte le celle (querySelectorAll). Le celle necessarie della griglia
+    this.classList.add("selected")
+} */

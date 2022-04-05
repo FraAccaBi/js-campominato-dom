@@ -42,9 +42,13 @@ form{
     align-items: center;
     justify-content: center
 }
-.cell>.selected {
+.selected {
     color:white;
     background-color: cornflowerblue;
+}
+.bomb{
+    color: white;
+    background-color: red;
 }
 
 footer > div{
