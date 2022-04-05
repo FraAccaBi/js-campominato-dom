@@ -62,11 +62,13 @@ function startGame(event) {
 function generate_grid(cells_number, cols_number) {
     //seleziono l'elento della dom desirato e lo assegniamo ad una const
     const gameAreaElement = document.querySelector('main .cells')
-    
+    // Pulire area di gioco
+    gameAreaElement.innerHTML = "";
 
 
 
-    for (let i = 1; i < (cells_number + 1); i++) {
+
+    for (let i = 1; i <= cells_number; i++) {
         //creare l'elemento della dom (cella) da inserire nell'area di gioco
         const cell = document.createElement('div')
 
