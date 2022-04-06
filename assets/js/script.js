@@ -5,7 +5,7 @@ con difficolta 2 => tra 1 e 81
 con difficolta 3 => tra 1 e 49
 Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro. */
 
-
+let bomb_numbers = []
 //inizializzo variabile per il submit del forum
 let bottonePlay = document.getElementById('form')
 //console.log(bottonePlay);
@@ -31,7 +31,7 @@ function generategrid(difficolta) {
     }
     const gameAreaElement = document.querySelector('main .cells');
     gameAreaElement.innerHTML = "";
-    let bomb_numbers = generateBombNumber(cell_number);
+    bomb_numbers = generateBombNumber(cell_number);
     console.log(bomb_numbers);
     for (let i = 1; i <= cell_number; i++) {
         let cell = document.createElement('div')
@@ -50,14 +50,14 @@ function generategrid(difficolta) {
                             cells[x].classList.add('bomb')
                         }
                     }
-                    alert('hai perso '+punteggio)
+                    alert('hai perso '+ punteggio)
                     endGame = true;
                 } else {
                     this.classList.add('selected')
                     punteggio++;
                 }
                 if(punteggio+16 == cell_number){
-                    alert('hai vinto con punteggio '+punteggio)
+                    alert('hai vinto con punteggio '+ punteggio)
                     endGame = true;    
                 }
             }else{
